@@ -1,6 +1,5 @@
 const gulp = require('gulp');
-const { buildCSS, watchCSS } = require('./gulp-tasks/styles');
-const { buildJS, watchJS } = require('./gulp-tasks/scripts');
+const { buildJS, watchJS, buildCSS, watchCSS } = require('codex-gulp');
 
 const build = gulp.parallel(buildCSS, buildJS);
 const watch = gulp.parallel(watchCSS, watchJS);
