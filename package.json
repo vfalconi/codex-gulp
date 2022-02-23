@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
 	"exports": {
+		".": "./index.js",
 		"./js": "./src/gulp-tasks/scripts.js",
 		"./css": "./src/gulp-tasks/styles.js"
 	},
