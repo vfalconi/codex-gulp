@@ -14,6 +14,18 @@ After the install finishes, if you do not already have a `gulpfile` in the proje
 
 The default `build` and `watch` tasks look for files in the directories listed in `src/config.gulp.js` and output them to `${ENV.BUILD_DIR}/assets`.
 
+The four task functions included in this are:
+- `buildJS`
+- `buildCSS`
+- `watchJS`
+- `watchCSS`
+
+The template `gulpfile` exposes four task CLIs:
+- `build:css`
+- `build:js`
+- `build`
+- `watch`
+
 ## TODO
 
 - support passing config into tasks somehow
