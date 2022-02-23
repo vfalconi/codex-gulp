@@ -1,10 +1,13 @@
 const { constants } = require('fs');
 const { copyFile } = require('fs/promises');
+const templateFiles = [
+	[ './src/gulpfile.js', '../../gulpfile.js' ],
+	[ './src/env', '../../.env' ],
+];
 
-// By using COPYFILE_EXCL, the operation will fail if destination.txt exists.
-try {
-  copyFile('./src/gulpfile.js', '../../gulpfile.js', constants.COPYFILE_EXCL);
-  console.log('gulpfile template was copied to project root');
-} catch {
-  console.log('existing gulpfile detected, template not copied');
-}
+templateFiles.forEach(templateFile => {
+	const [ src, dest ] = templateFile;
+	copyFile(src, dest, constants.COPYFILE_EXCL)
+		.then(result => console.log(`file template (${src}) was copied to ${dest}`))
+		.catch(e => console.log(`existing file (${dest}) detected, template (${src}) not copied`));
+});
