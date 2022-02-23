@@ -1,5 +1,5 @@
-const { constants } = 'fs';
-const { copyFile } = 'fs/promises';
+const { constants } = require('fs');
+const { copyFile } = require('fs/promises');
 
 // By using COPYFILE_EXCL, the operation will fail if destination.txt exists.
 try {
