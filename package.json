@@ -1,0 +1,27 @@
+{
+  "name": "codex-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vfalconi@github.com/vfalconi/codex-gulp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vfalconi/codex-gulp/issues"
+  },
+  "homepage": "https://github.com/vfalconi/codex-gulp#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.42.1"
+  }
+}
