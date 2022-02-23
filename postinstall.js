@@ -1,10 +1,10 @@
-import { constants } from 'fs';
-import { copyFile } from 'fs/promises';
+const { constants } = 'fs';
+const { copyFile } = 'fs/promises';
 
 // By using COPYFILE_EXCL, the operation will fail if destination.txt exists.
 try {
   await copyFile('./src/gulpfile.js', '../../gulpfile.js', constants.COPYFILE_EXCL);
-  console.log('source.txt was copied to destination.txt');
+  console.log('gulpfile template was copied to project root');
 } catch {
-  console.log('The file could not be copied');
+  console.log('existing gulpfile detected, template not copied');
 }
